@@ -1,0 +1,7 @@
+#title-bar {
+    height: 2em;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    background-color: black;
+}
