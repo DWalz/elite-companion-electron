@@ -1,6 +1,9 @@
+# Project
+cache
+
 # Node
 node_modules
 package-lock.json
 
-# Typescript
+# Build
 dist

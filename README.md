@@ -30,12 +30,28 @@ and giving them the opportunity to set goals and track them.
 ## Installation
 
 Currently, there are no builds for the companion app, you'll habe to 
-run it in your local NodeJS environment or build it yourself
+run it in your local NodeJS environment or build it yourself.
+
+This project depends on [elite-journal-js](https://github.com/DWalz/elite-journal-js).
+Make sure an installation of `elite-journal-js` is installed parallel to this
+application:
+
+```
+| - elite-journal-js
+|   | - package.json
+|   | - lib
+| - elite-companion
+    | - package.json
+    | - src
+```
+At least as long as `elite-journal-js` is not on [npm](https://www.npmjs.com).
+
+This solution is not very good but only temporary.
 
 
 ## Usage
 
-After cloning the repository, run
+After cloning the repository (and `elite-journal-js`), run
 ```sh
 npm install
 ```
@@ -47,7 +63,7 @@ npm start
 
 ## Build
 
-To build the app, build the typescript application with
+To build the app, build the typescript module with
 ```sh
 npm build
 ```

@@ -1,6 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
-import EliteWatcher from './backend/watcher';
+import journal from '../../elite-journal-js';
 
 function createMainWindow() {
   const window = new BrowserWindow({
@@ -16,5 +16,9 @@ function createMainWindow() {
 
 app.on('ready', () => {
   createMainWindow();
-  const watcher = new EliteWatcher();
+  journal({
+    cache: path.join(__dirname, '../cache'),
+  }).on('journal', (file_path) => {
+    console.log('New journal event 👀');
+  });
 });
